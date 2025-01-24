@@ -4,35 +4,44 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://cdn.tailwindcss.com"></script>
+        <script src="meteo.js"></script>
         <title>meteo app</title>
     </head>
     <body class="bg-[#9CD7FF] p-8">
         <!-------------section 1------------->
         <div class="flex justify-between">
             <div>
-                <input  type="text" placeholder="Rechercher" class="ml-3 rounded-3xl px-2 py-2 w-96 ">
+                <input id="input1" type="text" placeholder="Rechercher" class="ml-3 rounded-3xl px-2 py-2 w-96" />
+                <button id="searchButton" onclick="afficherData()" class="bg-blue-500 text-white px-4 py-2 rounded-3xl ml-2">Rechercher</button>
             </div>
-            <div class="mr-12 text-5xl font-black">
-                Béni mallal | Maroc
+            <div id="location" class="mr-12 text-5xl font-black">
+                <!-- location link -->
             </div>
         </div>
         <!-------------section 2------------->
         <div class="flex justify-between">
             <div class="text-5xl font-">
-                <p>11:29</p>
-                <p>22/01/2025</p>
+                <p id="hour"></p> 
+                <p id="date"></p>
             </div>
             <div>
                 <img src="assets/img/image 2.png" alt="img" class="w-64 h-50">
             </div>
-            <div class="text-lg font-black mr-36">
-                <p>Le vent : 35km/h</p>
-                <p>30°C </p> 
+            <div class="text-xlg font-black mr-40 pt-10">
+                <p id="vent"></p>
+                <p id="température"></p>
             </div>
         </div>
         <!-------------section 3------------->
-        <div class="flex justify-between ">
-            <div class="bg-[#1FA2FA] rounded-xl h-36 w-36 text-center flex justify-center items-center">
+        <div class="flex justify-between " id="container">
+            <div class="bg-[#1FA2FA] rounded-xl h-36 w-36 text-center flex justify-center items-center" >
+                <div>
+                    <p class="text-xl font-black">Mercredi</p>
+                    <p id="tmp"></p>
+                    <p>Ensoleillé</p>
+                </div>
+            </div>
+            <!-- <div class="bg-[#1FA2FA] rounded-xl h-36 w-36 text-center flex justify-center items-center">
                 <div>
                     <p class="text-xl font-black">Mercredi</p>
                     <p>13°C</p>
@@ -66,14 +75,7 @@
                     <p>13°C</p>
                     <p>Ensoleillé</p>
                 </div>
-            </div>
-            <div class="bg-[#1FA2FA] rounded-xl h-36 w-36 text-center flex justify-center items-center">
-                <div>
-                    <p class="text-xl font-black">Mercredi</p>
-                    <p>13°C</p>
-                    <p>Ensoleillé</p>
-                </div>
-            </div>
+            </div> -->
         </div>
     </body>
 </html>
