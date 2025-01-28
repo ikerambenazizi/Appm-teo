@@ -27,7 +27,7 @@ function afficherData() {
             hourElement.innerText = date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
             dateElement.innerText = date.toLocaleDateString();
             windElement.innerText = `Vent: ${data.wind.speed} m/s`;
-            temperatureElement.innerText = `Température: ${data.main.temp} °C`;
+            temperatureElement.innerText = ` ${data.main.temp} °C`;
 
             // Mise à jour des prévisions
             updateForecast();
@@ -52,8 +52,8 @@ function updateForecast() {
 
     forecastData.forEach(forecast => {
         const forecastCard = document.createElement('div');
-        forecastCard.className = 'bg-[#1FA2FA] rounded-xl h-36 w-36 text-center flex justify-center items-center';
-        forecastCard.innerHTML = `
+        forecastCard.className = 'bg-[#1FA2FA] rounded-xl h-36 w-full text-center flex justify-center items-center';
+            forecastCard.innerHTML = `
             <div>
                 <p class="text-xl font-black">${forecast.day}</p>
                 <p>${forecast.temp}</p>

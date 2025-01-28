@@ -4,73 +4,61 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://cdn.tailwindcss.com"></script>
-        
-        <title>meteo app</title>
+        <title>Meteo App</title>
     </head>
     <body class="bg-[#9CD7FF] p-8">
-        <!-------------section 1------------->
-        <div class="flex justify-between">
-            <div>
-                <input id="input1" type="text" placeholder="Rechercher" class="ml-3 rounded-3xl px-2 py-2 w-96" />
+        <!-------------section 1-------------> 
+        <div class="flex flex-wrap justify-between mb-8">
+            <div class="w-full sm:w-auto flex items-center">
+                <input id="input1" type="text" placeholder="Rechercher" class="ml-3 rounded-3xl px-2 py-2 w-full sm:w-96" />
                 <button id="searchButton" onclick="afficherData()" class="bg-blue-500 text-white px-4 py-2 rounded-3xl ml-2">Rechercher</button>
             </div>
-            <div id="location" class="mr-12 text-5xl font-black">
-                <!-- location link -->
-            </div>
+            <div id="location" class="mr-56 text-5xl font-black w-full sm:w-auto text-center sm:text-left mt-4 sm:mt-0"></div>
         </div>
-        <!-------------section 2------------->
-        <div class="flex justify-between">
-            <div class="text-5xl font-">
+
+        <!-------------section 2-------------> 
+        <div class="flex flex-col sm:flex-row justify-between items-center mb-8">
+            <div class="text-5xl font-bold w-full sm:w-auto">
                 <p id="hour"></p> 
                 <p id="date"></p>
             </div>
-            <div>
-                <img src="assets/img/image 2.png" alt="img" class="w-64 h-50">
+            <div class="w-full sm:w-auto mb-4 sm:mb-0">
+                <img src="assets/img/image 2.png" alt="img" class="w-full sm:w-64 sm:h-50 mx-auto">
             </div>
-            <div class="text-xlg font-black mr-40 pt-10">
+            <div class="text-3xl font-black mr-20 w-full sm:w-auto text-center sm:text-left">
                 <p id="vent"></p>
                 <p id="température"></p>
             </div>
         </div>
-        <!-------------section 3------------->
-        <div class="flex justify-between " id="container">
-            <div class="bg-[#1FA2FA] rounded-xl h-36 w-36 text-center flex justify-center items-center" >
+        <!-------------section 3-------------> 
+        <div class="grid grid-cols-1  md:flex gap-20 w-full justify-center" id="container">
+            <div class="bg-[#1FA2FA] rounded-xl h-36 w-36 sm:w-36 text-center flex justify-center items-center">
                 <div>
-                    <p class="text-xl font-black">Mercredi</p>
+                    <p class="text-xl font-black"></p>
                     <p id="tmp"></p>
-                    <p></p>
                 </div>
             </div>
-            <div class="bg-[#1FA2FA] rounded-xl h-36 w-36 text-center flex justify-center items-center">
+            <div class="bg-[#1FA2FA] rounded-xl h-36 w-36 sm:w-36 text-center flex justify-center items-center">
                 <div>
-                    <p class="text-xl font-black">Mercredi</p>
-                    <p>13°C</p>
-                    <p>Ensoleillé</p>
+                    <p class="text-xl font-black"></p>
                 </div>
             </div>
-            <div class="bg-[#1FA2FA] rounded-xl h-36 w-36 text-center flex justify-center items-center">
+            <div class="bg-[#1FA2FA] rounded-xl h-36 w-36 sm:w-36 text-center flex justify-center items-center">
                 <div>
-                    <p class="text-xl font-black">Mercredi</p>
-                    <p>13°C</p>
-                    <p>Ensoleillé</p>
+                    <p class="text-xl font-black"></p>
                 </div>
             </div>
-            <div class="bg-[#1FA2FA] rounded-xl h-36 w-36 text-center flex justify-center items-center">
+            <div class="bg-[#1FA2FA] rounded-xl h-36 w-36 sm:w-36 text-center flex justify-center items-center">
                 <div>
-                    <p class="text-xl font-black">Mercredi</p>
-                    <p>13°C</p>
-                    <p>Ensoleillé</p>
+                    <p class="text-xl font-black"></p>
                 </div>
             </div>
-            <div class="bg-[#1FA2FA] rounded-xl h-36 w-36 text-center flex justify-center items-center">
+            <div class="bg-[#1FA2FA] rounded-xl h-36 w-36 sm:w-36 text-center flex justify-center items-center">
                 <div>
-                    <p class="text-xl font-black">Mercredi</p>
-                    <p>13°C</p>
-                    <p>Ensoleillé</p>
+                    <p class="text-xl font-black"></p>
                 </div>
             </div>
         </div>
-
 
         <script src="meteo.js"></script>
     </body>
